@@ -1,5 +1,3 @@
-import ThemeToggle from "../ThemeToggle";
-
 export default function Hero() {
   return (
     <section className="py-20 px-6 text-center">
