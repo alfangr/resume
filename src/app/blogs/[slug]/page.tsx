@@ -1,7 +1,7 @@
 import { blogs } from "@/lib/constant";
 import { notFound } from "next/navigation";
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return blogs.map((blog) => ({
     slug: blog.slug,
   }));
