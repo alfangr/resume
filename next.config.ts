@@ -1,9 +1,11 @@
 import type { NextConfig } from "next";
 
+const isProduction = process.env.MODE === "production";
+
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/resume",
-  assetPrefix: "/resume/",
+  basePath: isProduction ? "/resume" : "",
+  assetPrefix: isProduction ? "/resume/" : "",
   trailingSlash: true,
   images: {
     unoptimized: true,
