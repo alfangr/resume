@@ -1,18 +1,17 @@
 import { blogs } from "@/lib/constant";
 import { notFound } from "next/navigation";
 
-export function generateStaticParams() {
-  return blogs.map((blog) => ({
-    slug: blog.slug,
-  }));
+export async function generateStaticParams() {
+  return blogs.map((blog) => ({ slug: blog.slug }));
 }
 
 export default async function BlogDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const blog = blogs.find((b) => b.slug === params.slug);
+  const { slug } = await params;
+  const blog = blogs.find((p) => p.slug === slug);
 
   if (!blog) return notFound();
 
