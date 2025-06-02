@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-const isProduction = true;
+const isProduction = process.env.MODE === "production";
 
 const nextConfig: NextConfig = {
   output: "export",

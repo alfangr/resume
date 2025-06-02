@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "deploy": "NODE_ENV=production yarn build && gh-pages -d out",
+    "deploy:build": "mv .env.local .env.local.bak && NODE_ENV=production yarn build && mv .env.local.bak .env.local",
+    "deploy": "yarn deploy:build && gh-pages -d out",
     "start": "next start",
     "lint": "next lint"
   },
