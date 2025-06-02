@@ -5,7 +5,7 @@ interface BlogDetailProps {
   params: { slug: string };
 }
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return blogs.map((blog) => ({
     slug: blog.slug,
   }));
