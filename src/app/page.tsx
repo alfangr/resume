@@ -9,7 +9,8 @@ export default function Home() {
       <Hero />
       <TechStack />
       <Projects />
-      <Blogs />
+      {/* TODO: need update content to publish */}
+      {/* <Blogs /> */}
     </main>
   );
 }

@@ -10,7 +10,7 @@ const navItems = [
   { label: "Home", href: "#home" },
   { label: "Tech Stack", href: "#tech-stack" },
   { label: "Projects", href: "#projects" },
-  { label: "Blogs", href: "#blog" },
+  // { label: "Blogs", href: "#blog" }, // TODO: need update content to publish
 ];
 
 export default function Header() {

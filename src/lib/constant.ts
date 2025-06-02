@@ -1,3 +1,7 @@
+export const characterLimit = {
+  project: 180,
+};
+
 export const projects = [
   {
     title: "Question Management System",
@@ -65,7 +69,7 @@ export const projects = [
     sourceUrl: null,
   },
   {
-    title: "K-Food - Korean Recipe & Ingredient Delivery Platform",
+    title: "K-Food - Korean Recipe Platform",
     slug: "k-food-platform",
     description:
       "A web and mobile platform for exploring a wide range of Korean recipes, where users can directly purchase the listed ingredients. The system connects to local outlets for ingredient delivery based on location, initially focused on Jakarta and Yogyakarta regions.",
