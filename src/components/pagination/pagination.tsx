@@ -1,81 +1,80 @@
+import React from "react";
 import Link from "next/link";
 
 interface PaginationProps {
   currentPage: number;
   totalPages: number;
   basePath: string;
+  onPageChange?: (page: number) => void; // opsional callback pindah halaman
 }
-
-export function ChevronLeftIcon() {
-  return (
-    <svg
-      className="w-4 h-4"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-      viewBox="0 0 24 24"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-    </svg>
-  );
-}
-
-export function ChevronRightIcon() {
-  return (
-    <svg
-      className="w-4 h-4"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-      viewBox="0 0 24 24"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-    </svg>
-  );
-}
-
 
 export default function Pagination({
   currentPage,
   totalPages,
   basePath,
+  onPageChange,
 }: PaginationProps) {
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
+  function handleClick(e: React.MouseEvent, page: number) {
+    e.preventDefault();
+    if (onPageChange) onPageChange(page);
+  }
+
   return (
     <nav className="flex justify-center items-center space-x-2 mt-8">
-      {/* Prev Button */}
       {currentPage > 1 && (
-        <Link
+        <a
           href={`${basePath}?page=${currentPage - 1}`}
+          onClick={(e) => handleClick(e, currentPage - 1)}
           className="p-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-zinc-700 dark:text-gray-200 dark:hover:bg-zinc-600"
+          aria-label="Previous Page"
         >
-          <ChevronLeftIcon />
-        </Link>
+          {/* ChevronLeftIcon svg */}
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </a>
       )}
 
-      {/* Page Numbers */}
       {pages.map((page) => (
-        <Link
+        <a
           key={page}
           href={`${basePath}?page=${page}`}
+          onClick={(e) => handleClick(e, page)}
           className={`px-4 py-2 rounded-lg ${currentPage === page
-            ? "bg-blue-600 text-white"
-            : "bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-zinc-700 dark:text-gray-200 dark:hover:bg-zinc-600"
+              ? "bg-blue-600 text-white"
+              : "bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-zinc-700 dark:text-gray-200 dark:hover:bg-zinc-600"
             }`}
         >
           {page}
-        </Link>
+        </a>
       ))}
 
-      {/* Next Button */}
       {currentPage < totalPages && (
-        <Link
+        <a
           href={`${basePath}?page=${currentPage + 1}`}
+          onClick={(e) => handleClick(e, currentPage + 1)}
           className="p-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-zinc-700 dark:text-gray-200 dark:hover:bg-zinc-600"
+          aria-label="Next Page"
         >
-          <ChevronRightIcon />
-        </Link>
+          {/* ChevronRightIcon svg */}
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
       )}
     </nav>
   );

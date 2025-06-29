@@ -1,28 +1,41 @@
+"use client";
+
 import Link from "next/link";
 import { projects, characterLimit, PROJECTS_PER_PAGE } from "@/lib/constant";
-import { notFound } from "next/navigation";
 import Pagination from "@/components/pagination/pagination";
+import { useState, useEffect } from "react";
 
-interface ProjectsPageProps {
-  searchParams: {
-    page?: string;
-  };
-}
-
-export default function ProjectsPage({ searchParams }: ProjectsPageProps) {
+export default function ProjectsPage() {
   const projectTextLimit = characterLimit.project;
-  const page = parseInt(searchParams.page || "1");
+
+  // state current page
+  const [page, setPage] = useState(1);
+
+  // ambil page dari URL (browser)
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const p = parseInt(params.get("page") || "1");
+    setPage(p);
+  }, []);
+
   const sortedProjects = projects.sort(
     (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
   );
 
   const totalPages = Math.ceil(sortedProjects.length / PROJECTS_PER_PAGE);
-  if (page < 1 || page > totalPages) return notFound();
 
   const paginatedProjects = sortedProjects.slice(
     (page - 1) * PROJECTS_PER_PAGE,
     page * PROJECTS_PER_PAGE
   );
+
+  // fungsi pindah halaman: update URL tanpa reload
+  function goToPage(newPage: number) {
+    setPage(newPage);
+    const url = new URL(window.location.href);
+    url.searchParams.set("page", newPage.toString());
+    window.history.pushState({}, "", url.toString());
+  }
 
   return (
     <main className="min-h-screen py-20 px-6 bg-white dark:bg-black text-black dark:text-white">
@@ -57,6 +70,7 @@ export default function ProjectsPage({ searchParams }: ProjectsPageProps) {
         currentPage={page}
         totalPages={totalPages}
         basePath="/projects"
+        onPageChange={goToPage}
       />
     </main>
   );
