@@ -1,9 +1,7 @@
 import Link from "next/link";
-import { projects, characterLimit } from "@/lib/constant";
+import { projects, characterLimit, PROJECTS_PER_PAGE } from "@/lib/constant";
 import { notFound } from "next/navigation";
 import Pagination from "@/components/pagination/pagination";
-
-export const PROJECTS_PER_PAGE = 6;
 
 interface ProjectsPageProps {
   searchParams: {
