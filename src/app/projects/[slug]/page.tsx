@@ -2,7 +2,9 @@ import { projects } from "@/lib/constant";
 import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
-  return projects.map((project) => ({ slug: project.slug }));
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
 }
 
 export default async function ProjectDetail({
@@ -52,7 +54,31 @@ export default async function ProjectDetail({
         </div>
 
         <div className="flex gap-4 mt-6">
-          {project.demoUrl && (
+          {project.demoUrl && typeof project.demoUrl === 'object' && (
+            <>
+              {project.demoUrl.playStore && (
+                <a
+                  href={project.demoUrl.playStore}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline"
+                >
+                  📱 Play Store
+                </a>
+              )}
+              {project.demoUrl.appStore && (
+                <a
+                  href={project.demoUrl.appStore}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline"
+                >
+                  🍎 App Store
+                </a>
+              )}
+            </>
+          )}
+          {project.demoUrl && typeof project.demoUrl === 'string' && (
             <a
               href={project.demoUrl}
               target="_blank"
