@@ -19,6 +19,8 @@ export const characterLimit = {
   project: 180,
 };
 
+export const PROJECTS_PER_PAGE = 6;
+
 export const projects: Project[] = [
   {
     title: "Question Management System",
