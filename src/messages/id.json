@@ -1,0 +1,59 @@
+{
+  "Header": {
+    "nav": {
+      "home": "Beranda",
+      "techStack": "Keahlian",
+      "projects": "Proyek"
+    }
+  },
+  "Hero": {
+    "title": "Hi, saya Alfan 👋",
+    "subtitle": "Seorang fullstack developer yang fokus pada Laravel, React Native, dan Next.js. Saya membangun sistem digital yang terstruktur, terdokumentasi, dan mudah dirawat.",
+    "cta": "Yuk terhubung dan bangun sesuatu yang keren bersama 🚀",
+    "downloadCv": "Unduh CV"
+  },
+  "TechStack": {
+    "label": "Keahlian",
+    "title": "Teknologi yang saya gunakan",
+    "description": "Kombinasi teknologi yang biasa saya gunakan untuk membangun produk dari frontend, backend, sampai infrastruktur.",
+    "toolsCounter": "{count} alat",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Peralatan",
+      "workflow": "Alur Kerja"
+    }
+  },
+  "Projects": {
+    "home": {
+      "label": "Proyek",
+      "sectionTitle": "Proyek Terbaru Saya",
+      "sectionDescription": "Kumpulan proyek yang pernah saya kerjakan, mulai dari aplikasi web hingga mobile.",
+      "viewAll": "Lihat Semua Proyek →"
+    },
+    "page": {
+      "title": "📂 Semua Proyek",
+      "role": "🧑‍💻 Peran:",
+      "techStack": "🧰 Teknologi:",
+      "features": "🚀 Fitur:",
+      "contributions": "🛠️ Kontribusi Saya:",
+      "playStore": "📱 Play Store",
+      "appStore": "🍎 App Store",
+      "liveDemo": "🔗 Demo Langsung",
+      "sourceCode": "🧾 Kode Sumber"
+    }
+  },
+  "Blogs": {
+    "home": {
+      "sectionTitle": "📚 Blog Terbaru",
+      "viewAll": "Lihat Semua Blog →"
+    },
+    "page": {
+      "title": "📚 Semua Blog"
+    }
+  },
+  "Footer": {
+    "text": "© {yearText} alfangr.dev — Dibangun dengan ❤️ oleh alfangr.dev."
+  }
+}
+

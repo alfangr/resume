@@ -1,0 +1,58 @@
+{
+  "Header": {
+    "nav": {
+      "home": "Home",
+      "techStack": "Tech Stack",
+      "projects": "Projects"
+    }
+  },
+  "Hero": {
+    "title": "Hi, I’m Alfan 👋",
+    "subtitle": "A fullstack developer specializing in Laravel, React Native, and Next.js. I build structured, documented, and maintainable digital systems.",
+    "cta": "Let’s connect and build something awesome together 🚀",
+    "downloadCv": "Download CV"
+  },
+  "TechStack": {
+    "label": "Tech Stack",
+    "title": "Tools I work with",
+    "description": "A set of technologies I usually use to build products from frontend, backend, to infrastructure.",
+    "toolsCounter": "{count} tools",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Tools",
+      "workflow": "Workflow"
+    }
+  },
+  "Projects": {
+    "home": {
+      "label": "Projects",
+      "sectionTitle": "My Latest Projects",
+      "sectionDescription": "A collection of projects I've worked on, ranging from web to mobile applications.",
+      "viewAll": "View All Projects →"
+    },
+    "page": {
+      "title": "📂 All Projects",
+      "role": "🧑‍💻 Role:",
+      "techStack": "🧰 Tech Stack:",
+      "features": "🚀 Features:",
+      "contributions": "🛠️ My Contribution:",
+      "playStore": "📱 Play Store",
+      "appStore": "🍎 App Store",
+      "liveDemo": "🔗 Live Demo",
+      "sourceCode": "🧾 Source Code"
+    }
+  },
+  "Blogs": {
+    "home": {
+      "sectionTitle": "📚 Latest Blogs",
+      "viewAll": "View All Blogs →"
+    },
+    "page": {
+      "title": "📚 All Blog Posts"
+    }
+  },
+  "Footer": {
+    "text": "© {yearText} alfangr.dev — Built with ❤️ by alfangr.dev."
+  }
+}
