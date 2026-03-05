@@ -6,6 +6,7 @@ import idMessages from "@/messages/id.json";
 import enMessages from "@/messages/en.json";
 
 type Language = "id" | "en";
+type Messages = typeof idMessages;
 
 interface LanguageContextValue {
     language: Language;
@@ -22,7 +23,7 @@ export function LanguageProvider({
     children: React.ReactNode;
 }) {
     const [language, setLanguageState] = useState<Language>("id");
-    const [messages, setMessages] = useState<any>(idMessages);
+    const [messages, setMessages] = useState<Messages>(idMessages);
 
     useEffect(() => {
         if (typeof window === "undefined") return;
