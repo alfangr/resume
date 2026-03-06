@@ -259,7 +259,7 @@ export const projects: Project[] = [
             "CRM integration with Braze",
             "Storefront management system"
         ],
-        demoUrl: null,
+        demoUrl: "https://smartseller.co.id/",
         sourceUrl: null,
         createdAt: "2024-06-29",
         id_content: {
@@ -292,7 +292,7 @@ export const projects: Project[] = [
             "Understanding market trends and consumer behavior",
             "Lightweight and easy-to-use Chrome extension"
         ],
-        demoUrl: null,
+        demoUrl: "https://chrome-stats.com/d/lgoogkkhfmaojijmfdikbgbpdmckmbdo/download",
         sourceUrl: null,
         createdAt: "2024-05-15",
         id_content: {
@@ -326,6 +326,7 @@ export const projects: Project[] = [
             "Available on iOS and Android platforms"
         ],
         demoUrl: {
+            live: "https://wallet.nanobyte.finance/",
             playStore: "https://play.google.com/store/apps/details?id=finance.nanobyte.wallet&hl=en",
             appStore: "https://apps.apple.com/app/nanobyte-wallet/id6502337341"
         },

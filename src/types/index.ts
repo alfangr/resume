@@ -1,4 +1,5 @@
 export interface DemoUrl {
+  live?: string;
   playStore?: string;
   appStore?: string;
 }

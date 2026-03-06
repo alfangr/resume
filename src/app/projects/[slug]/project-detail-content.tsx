@@ -60,6 +60,16 @@ export default function ProjectDetailContent({ project }: { project: Project }) 
         <div className="flex gap-4 mt-6">
           {project.demoUrl && typeof project.demoUrl === 'object' && (
             <>
+              {project.demoUrl.live && (
+                <a
+                  href={project.demoUrl.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline"
+                >
+                  {t("liveDemo")}
+                </a>
+              )}
               {project.demoUrl.playStore && (
                 <a
                   href={project.demoUrl.playStore}
