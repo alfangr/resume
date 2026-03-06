@@ -116,7 +116,7 @@ export const projects: Project[] = [
         title: "SIPBOS - Letter Management System",
         slug: "sipbos-letter-management-system",
         description:
-            "A comprehensive web and mobile-based letter management system designed for BSSN (Badan Siber dan Sandi Negara) departments to efficiently track and manage official correspondence. The system handles the complete letter lifecycle including creation, editing, disposition, digital signing, and workflow management for internal office operations.",
+            "A comprehensive web and mobile-based letter management system designed for one of the government's departments to efficiently track and manage official correspondence. The system handles the complete letter lifecycle including creation, editing, disposition, digital signing, and workflow management for internal office operations.",
         role: "Mobile Developer",
         tech: ["Laravel", "MySQL", "React Native", "TailwindCSS"],
         features: [
@@ -132,7 +132,7 @@ export const projects: Project[] = [
         id_content: {
             title: "SIPBOS - Sistem Tata Kelola Surat",
             description:
-                "Sistem tata kelola surat berbasis web dan mobile yang komprehensif yang dirancang untuk departemen BSSN (Badan Siber dan Sandi Negara) untuk melacak dan mengelola korespondensi resmi secara efisien. Sistem ini menangani siklus hidup surat lengkap termasuk pembuatan, penyuntingan, disposisi, tanda tangan digital, dan manajemen alur kerja untuk operasi kantor internal.",
+                "Sistem tata kelola surat berbasis web dan mobile yang komprehensif yang dirancang untuk salah satu departemen pemerintahan untuk melacak dan mengelola korespondensi resmi secara efisien. Sistem ini menangani siklus hidup surat lengkap termasuk pembuatan, penyuntingan, disposisi, tanda tangan digital, dan manajemen alur kerja untuk operasi kantor internal.",
             role: "Mobile Developer",
             features: [
                 "Manajemen siklus hidup surat end-to-end: pembuatan, penyuntingan, disposisi, dan tanda tangan digital",
