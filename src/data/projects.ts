@@ -6,6 +6,37 @@ export const PROJECT_TEXT_LIMIT = 180;
 
 export const projects: Project[] = [
     {
+        title: "Fest Event - Event Management System",
+        slug: "fest-event-management-system",
+        description: "A comprehensive event management platform designed to handle the entire lifecycle of events, from planning and location setup to participant registration, ticket generation, and certificate issuance. The system provides a centralized dashboard for organizers to monitor activities, manage event types, and track participant attendance via real-time QR scanning.",
+        role: "Fullstack Developer",
+        tech: ["Laravel", "MySQL", "React", "Inertia.js", "TailwindCSS", "Shadcn UI"],
+        features: [
+            "End-to-End Event Management: Complete control over event creation, scheduling, and lifecycle tracking.",
+            "Participant & Attendance System: Streamlined registration workflow with integrated QR code scanning for fast on-site check-in.",
+            "Dynamic Template Designer: Custom drag-and-drop designer for creating personalized offline tickets and digital certificates.",
+            "Automated Bulk Generation: Background processing for generating high-volume tickets and certificates in PDF format.",
+            "Location & Region Integration: Advanced location management featuring embedded maps and comprehensive regional data support.",
+            "Secure Access Control: Robust role-based permission system (RBAC) and detailed activity logging for audit trails."
+        ],
+        demoUrl: null,
+        sourceUrl: null,
+        createdAt: "2026-04-13",
+        id_content: {
+            title: "Fest Event - Sistem Manajemen Acara",
+            description: "Platform manajemen acara komprehensif yang dirancang untuk menangani seluruh siklus hidup acara, mulai dari perencanaan dan pengaturan lokasi hingga pendaftaran peserta, pembuatan tiket, dan penerbitan sertifikat. Sistem ini menyediakan dashboard terpusat bagi penyelenggara untuk memantau aktivitas, mengelola jenis acara, dan melacak kehadiran peserta melalui pemindaian QR real-time.",
+            role: "Fullstack Developer",
+            features: [
+                "Manajemen Acara End-to-End: Kontrol penuh atas pembuatan acara, penjadwalan, dan pelacakan siklus hidup.",
+                "Sistem Peserta & Kehadiran: Alur pendaftaran yang efisien dengan pemindaian kode QR terintegrasi untuk check-in di tempat yang cepat.",
+                "Desainer Template Dinamis: Desainer drag-and-drop kustom untuk membuat tiket offline dan sertifikat digital yang dipersonalisasi.",
+                "Pembuatan Massal Otomatis: Pemrosesan latar belakang untuk menghasilkan tiket dan sertifikat bervolume tinggi dalam format PDF.",
+                "Integrasi Lokasi & Wilayah: Manajemen lokasi tingkat lanjut yang menampilkan peta tertanam dan dukungan data regional yang komprehensif.",
+                "Kontrol Akses Aman: Sistem izin berbasis peran (RBAC) yang kuat dan pencatatan aktivitas terperinci untuk jejak audit."
+            ]
+        }
+    },
+    {
         title: "Internal Finance Tool (IFIOL)",
         slug: "internal-finance-tool",
         description: "An internal financial management system used to handle reimbursement, cash advance, purchase orders, subscriptions, and vendor management with structured approval workflows and centralized tracking.",
