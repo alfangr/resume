@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "deploy:build": "mv .env.local .env.local.bak && NODE_ENV=production yarn build && mv .env.local.bak .env.local",
+    "deploy:build": "mv .env.local .env.local.bak && MODE=production yarn build && mv .env.local.bak .env.local",
     "deploy": "yarn deploy:build && gh-pages -d out",
     "start": "next start",
     "lint": "eslint ."
