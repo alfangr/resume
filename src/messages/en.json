@@ -20,6 +20,7 @@
     "categories": {
       "frontend": "Frontend",
       "backend": "Backend",
+      "ai": "AI",
       "tools": "Tools",
       "workflow": "Workflow"
     }
