@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { useTranslations } from "next-intl";
@@ -23,14 +24,14 @@ export default function Hero() {
       <p className="text-lg max-w-2xl mx-auto mb-6">{t("subtitle")}</p>
 
       <div className="mt-8">
-        <a
+        <Link
           href={siteConfig.cvPath}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-600 transition mb-4"
         >
           {t("downloadCv")}
-        </a>
+        </Link>
         <p className="text-base font-medium text-gray-500 dark:text-gray-400 mb-4">
           {t("cta")}
         </p>
