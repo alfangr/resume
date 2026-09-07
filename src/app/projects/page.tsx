@@ -3,21 +3,19 @@
 import { projects, PROJECTS_PER_PAGE } from "@/data/projects";
 import { sortByDateDesc } from "@/utils/sort";
 import Pagination from "@/components/pagination";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import ProjectCard from "@/components/ui/project-card";
 
 export default function ProjectsPage() {
   const t = useTranslations("Projects.page");
 
-  const [page, setPage] = useState(1);
-
   // Read initial page from URL query params
-  useEffect(() => {
+  const [page, setPage] = useState(() => {
+    if (typeof window === "undefined") return 1;
     const params = new URLSearchParams(window.location.search);
-    const p = parseInt(params.get("page") || "1");
-    setPage(p);
-  }, []);
+    return parseInt(params.get("page") || "1");
+  });
 
   const sortedProjects = sortByDateDesc(projects, "createdAt");
 

@@ -1,12 +1,17 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { NextIntlClientProvider } from "next-intl";
 import idMessages from "@/messages/id.json";
 import enMessages from "@/messages/en.json";
 
 type Language = "id" | "en";
 type Messages = typeof idMessages;
+
+const messagesByLanguage: Record<Language, Messages> = {
+    id: idMessages,
+    en: enMessages,
+};
 
 interface LanguageContextValue {
     language: Language;
@@ -22,21 +27,16 @@ export function LanguageProvider({
 }: {
     children: React.ReactNode;
 }) {
-    const [language, setLanguageState] = useState<Language>("id");
-    const [messages, setMessages] = useState<Messages>(idMessages);
-
-    useEffect(() => {
-        if (typeof window === "undefined") return;
+    const [language, setLanguageState] = useState<Language>(() => {
+        if (typeof window === "undefined") return "id";
         const stored = window.localStorage.getItem("language");
-        if (stored === "id" || stored === "en") {
-            setLanguageState(stored);
-            setMessages(stored === "id" ? idMessages : enMessages);
-        }
-    }, []);
+        return stored === "id" || stored === "en" ? stored : "id";
+    });
+
+    const messages = messagesByLanguage[language];
 
     const setLanguage = (value: Language) => {
         setLanguageState(value);
-        setMessages(value === "id" ? idMessages : enMessages);
         if (typeof window !== "undefined") {
             window.localStorage.setItem("language", value);
             document.documentElement.lang = value;

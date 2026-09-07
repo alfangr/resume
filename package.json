@@ -4,30 +4,29 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "deploy:build": "mv .env.local .env.local.bak && NODE_ENV=production yarn build && mv .env.local.bak .env.local",
     "deploy": "yarn deploy:build && gh-pages -d out",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
-    "next": "15.3.3",
+    "next": "^16.3.4",
     "next-intl": "^4.8.3",
     "next-themes": "^0.4.6",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "react-icons": "^5.5.0",
     "tech-stack-icons": "3.7.1"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
     "eslint": "^9",
-    "eslint-config-next": "15.3.3",
+    "eslint-config-next": "^16.3.4",
     "gh-pages": "^6.3.0",
     "shx": "^0.4.0",
     "tailwindcss": "^4",
