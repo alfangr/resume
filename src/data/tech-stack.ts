@@ -74,11 +74,6 @@ export const techCategories: TechCategory[] = [
             { icon: "vscode", text: "VS Code" },
             { icon: "xcode", text: "Xcode" },
             { icon: "expo", text: "Expo" },
-        ],
-    },
-    {
-        titleKey: "categories.workflow",
-        items: [
             { icon: "jira", text: "Jira" },
             { icon: "slack", text: "Slack" },
             { icon: "atlassian", text: "Atlassian" },
